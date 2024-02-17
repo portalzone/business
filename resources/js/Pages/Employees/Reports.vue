@@ -6,7 +6,7 @@ import InputLabel from '@/Components/InputLabel.vue';
 import SelectInput from '@/Components/SelectInput.vue';
 import DataTable from 'datatables.net-vue3';
 import 'datatables.net-dt/css/jquery.dataTables.css';
-import ButtonsHtml5 from 'datatables.net-buttons/js/button.html5'
+import ButtonsHtml5 from 'datatables.net-buttons/js/button.html5';
 import 'datatables.net-buttons/js/buttons.print';
 import 'datatables.net-responsive-dt';
 import "datatables.net-responsive-dt/css/responsive.dataTables.min.css";
