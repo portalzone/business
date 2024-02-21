@@ -96,8 +96,7 @@ buttons2.value = [
 ];
 
 
-console.log("buttons1:", buttons1);
-console.log("buttons2:", buttons2);
+
 </script>
 
 
