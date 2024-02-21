@@ -30,7 +30,7 @@ const  form = useForm({
     name: '',
     email: '',
     phone: '',
-    department_id: ''
+    department_id: 0
 });
 const formPage = useForm({});
 const onPageClick = (event) => {
@@ -72,7 +72,7 @@ const save = () => {
 }
 const ok = (msj) => {
     form.reset();
-    // closeModal();
+     closeModal();
     Swal.fire({title:msj, icon:'success'});
 }
 const deleteEmployee = (id,name) => {
@@ -150,7 +150,7 @@ const deleteEmployee = (id,name) => {
             <div class="bg-white grid v-screen place-items-center">
                 <VueTailWindPagination 
                     :current="employees.currentPage" :total="employees.total"
-                    :pe-page="employees.perPage"
+                    :per-page="employees.perPage"
                     @page-changed="$event=> onPageClick($event)">
                     
                 </VueTailWindPagination>
@@ -185,7 +185,8 @@ const deleteEmployee = (id,name) => {
                 <InputLabel for="department_id" value="Department:"></InputLabel>
                 <SelectInput id="department_id" :options="departments"
                   v-model="form.department_id"
-                type="text" class="mt-1 block w-3/4"></SelectInput>
+                  :modelValue ="form.department_id"
+                class="mt-1 block w-3/4"></SelectInput>
                 <InputError :message="form.errors.department_id" class="mt-2"></InputError>
             </div>
             <div class="p-3 mt-6">
